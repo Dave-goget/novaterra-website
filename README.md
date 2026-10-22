@@ -9,4 +9,4 @@ A static website for NovaTerra Survey Consults. It uses plain HTML, CSS, and Jav
 3. In the repository, open **Settings → Pages** and set the build and deployment source to **GitHub Actions**.
 4. The included workflow deploys the site when changes are pushed to `main`. The public URL appears under **Settings → Pages** after the workflow succeeds.
 
-Before launch, replace the contact-details placeholder in `index.html` with the company's preferred email address or phone number.
+The survey request form prepares a prefilled email for the visitor to review and send. It does not submit to a web server.

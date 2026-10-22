@@ -271,23 +271,70 @@ h1 em, h2 em { font-family: var(--serif); font-weight: 400; letter-spacing: -.07
 .sector-list h3 { margin: 0; font-size: 18px; font-weight: 450; letter-spacing: -.025em; }
 .sector-arrow { color: #c9a96f; font-size: 16px; text-align: right; }
 
-.contact-section { padding-block: 100px; }
-.contact-card {
+.request-section { padding-top: 50px; }
+.request-heading {
   position: relative;
-  min-height: 430px;
   overflow: hidden;
-  padding: 30px clamp(27px, 7vw, 90px) 55px;
-  background: #e7e5dc;
+  padding-block: 49px 44px;
+  background: var(--ink);
+  color: var(--white);
 }
-.contact-topline { display: flex; justify-content: space-between; margin-bottom: 55px; color: var(--ink-soft); font-size: 8px; letter-spacing: .15em; }
-.contact-card h2 { position: relative; z-index: 1; margin: 18px 0 17px; font-size: clamp(55px, 7.5vw, 94px); font-weight: 550; letter-spacing: -.08em; line-height: .88; }
-.contact-card h2 em { color: #77796d; }
-.contact-copy { position: relative; z-index: 1; max-width: 340px; margin-bottom: 22px; color: var(--ink-soft); font-size: 13px; line-height: 1.7; }
-.contact-note { position: relative; z-index: 1; display: flex; align-items: center; gap: 14px; max-width: 500px; padding-top: 16px; border-top: 1px solid var(--line); }
-.contact-note-icon { display: grid; width: 29px; height: 29px; flex: none; place-items: center; border: 1px solid #a17a3d; border-radius: 50%; color: #8b632e; font-size: 19px; }
-.contact-note p { margin: 0; color: var(--ink-soft); font-size: 10px; line-height: 1.6; }
-.contact-note strong { color: var(--ink); font-size: 11px; }
-.contact-decoration { position: absolute; right: 4%; bottom: -105px; color: rgba(119, 121, 109, .12); font-family: var(--serif); font-size: clamp(220px, 38vw, 480px); letter-spacing: -.14em; line-height: .8; pointer-events: none; }
+.request-heading-inner { position: relative; z-index: 1; }
+.request-heading .eyebrow { color: #c2c3b7; }
+.request-heading h2 { margin: 21px 0 10px; font-size: clamp(42px, 5vw, 62px); font-weight: 550; letter-spacing: -.06em; line-height: 1; }
+.request-heading-inner > p:last-child { max-width: 490px; margin: 0; color: #c4c5ba; font-size: 13px; line-height: 1.7; }
+.request-contour {
+  position: absolute;
+  top: -155px;
+  right: 12%;
+  width: 210px;
+  aspect-ratio: 1;
+  border: 1px dashed rgba(243, 241, 233, .35);
+  transform: rotate(30deg);
+}
+.request-contour::before, .request-contour::after {
+  position: absolute;
+  inset: 18px;
+  border: 1px dashed rgba(243, 241, 233, .25);
+  content: "";
+}
+.request-contour::after { inset: 38px; }
+.request-body { padding-block: 64px 76px; background: #e7e5dc; }
+.request-layout { display: grid; grid-template-columns: 1.2fr .8fr; align-items: start; max-width: 1080px; }
+.request-form { padding: 32px; border-radius: 12px 0 0 12px; background: var(--white); }
+.request-form h3, .direct-contact h3 { margin: 0 0 25px; font-size: 16px; font-weight: 600; }
+.form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 19px 15px; }
+.form-field { display: grid; min-width: 0; gap: 8px; color: var(--ink); font-size: 10px; font-weight: 600; }
+.form-field > span > span:not(.optional) { color: #a37032; }
+.form-field .optional { color: var(--ink-soft); font-weight: 400; }
+.form-field-wide { grid-column: 1 / -1; }
+.form-field input, .form-field select, .form-field textarea {
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 11px;
+  border: 1px solid #d8d7cf;
+  border-radius: 4px;
+  background: #fff;
+  color: var(--ink);
+  font: 400 11px/1.5 var(--sans);
+}
+.form-field textarea { min-height: 112px; resize: vertical; }
+.form-field input::placeholder, .form-field textarea::placeholder { color: #85867f; }
+.form-field input:focus-visible, .form-field select:focus-visible, .form-field textarea:focus-visible {
+  outline: 2px solid #a17a3d;
+  outline-offset: 2px;
+}
+.form-submit { margin-top: 21px; border: 0; cursor: pointer; }
+.form-disclaimer { max-width: 410px; margin: 12px 0 0; color: var(--ink-soft); font-size: 10px; line-height: 1.6; }
+.direct-contact { padding: 32px 0 20px 38px; }
+.contact-details { margin: 0; }
+.contact-details > div { display: grid; grid-template-columns: 78px 1fr; gap: 12px; padding-block: 13px; border-bottom: 1px solid var(--line); }
+.contact-details dt { color: var(--ink-soft); font-size: 9px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+.contact-details dd { margin: 0; font-size: 11px; }
+.contact-details a { text-decoration: none; }
+.contact-details a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.external-mark { color: #9b713a; }
+.contact-help { margin: 21px 0 0; color: var(--ink-soft); font-size: 11px; line-height: 1.75; }
 
 .site-footer { background: var(--ink); color: var(--white); }
 .footer-main { display: flex; align-items: center; justify-content: space-between; min-height: 142px; }
@@ -295,6 +342,9 @@ h1 em, h2 em { font-family: var(--serif); font-weight: 400; letter-spacing: -.07
 .brand-footer .brand-name { font-size: 23px; }
 .brand-footer .brand-descriptor { color: #c5c6bb; }
 .footer-main > p { margin: 0; color: #c4c5ba; font-family: var(--serif); font-size: 14px; font-style: italic; line-height: 1.45; }
+.footer-links { display: flex; align-items: center; gap: 20px; }
+.footer-links > a:not(.back-to-top) { color: #d3d4ca; font-size: 10px; text-decoration: none; }
+.footer-links > a:not(.back-to-top):hover { color: var(--white); text-decoration: underline; text-underline-offset: 3px; }
 .back-to-top { display: inline-flex; align-items: center; gap: 13px; font-size: 10px; text-decoration: none; }
 .back-to-top span { color: var(--accent); font-size: 16px; }
 .footer-bottom { display: flex; justify-content: space-between; padding-block: 18px 21px; border-top: 1px solid rgba(255, 255, 255, .2); color: #b3b4a9; font-size: 9px; letter-spacing: .05em; }
@@ -317,6 +367,10 @@ h1 em, h2 em { font-family: var(--serif); font-weight: 400; letter-spacing: -.07
   .about-inner, .sectors-inner { gap: 55px; }
   .about-visual { min-height: 380px; }
   .mission { gap: 45px; }
+  .request-layout { grid-template-columns: 1.1fr .9fr; }
+  .request-form { padding: 25px; }
+  .direct-contact { padding-left: 25px; }
+  .footer-links { flex-wrap: wrap; justify-content: flex-end; gap: 12px 17px; }
 }
 
 @media (max-width: 700px) {
@@ -391,14 +445,22 @@ h1 em, h2 em { font-family: var(--serif); font-weight: 400; letter-spacing: -.07
   .sectors-inner { grid-template-columns: 1fr; gap: 35px; }
   .sectors-heading > p:last-child { font-size: 12px; }
   .sector-list h3 { font-size: 15px; }
-  .contact-section { padding-block: 55px; }
-  .contact-card { min-height: 0; padding: 21px 22px 38px; }
-  .contact-topline { gap: 15px; margin-bottom: 43px; font-size: 7px; }
-  .contact-card h2 { font-size: clamp(56px, 14vw, 80px); }
-  .contact-decoration { right: -18px; bottom: -34px; font-size: 230px; }
+  .request-section { padding-top: 28px; }
+  .request-heading { padding-block: 38px; }
+  .request-heading h2 { font-size: clamp(42px, 11vw, 58px); }
+  .request-contour { right: -95px; opacity: .6; }
+  .request-body { padding-block: 30px 42px; }
+  .request-layout { grid-template-columns: 1fr; }
+  .request-form { padding: 22px 18px; border-radius: 10px; }
+  .form-grid { gap: 17px 11px; }
+  .form-field input, .form-field select, .form-field textarea { font-size: 12px; }
+  .direct-contact { padding: 35px 4px 10px; }
+  .contact-details > div { grid-template-columns: 82px 1fr; }
   .footer-main { flex-wrap: wrap; gap: 25px; min-height: 0; padding-block: 32px; }
   .footer-main > p { margin-left: auto; font-size: 12px; text-align: right; }
-  .back-to-top { width: 100%; justify-content: space-between; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, .2); }
+  .footer-links { width: 100%; flex-direction: column; align-items: stretch; gap: 0; }
+  .footer-links > a:not(.back-to-top) { padding-block: 12px; border-top: 1px solid rgba(255, 255, 255, .2); }
+  .back-to-top { justify-content: space-between; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, .2); }
   .footer-bottom { gap: 14px; font-size: 8px; }
 }
 

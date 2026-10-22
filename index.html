@@ -36,7 +36,7 @@
         <a href="#capabilities">Capabilities</a>
         <a href="#about">About</a>
         <a href="#sectors">Who we serve</a>
-        <a class="nav-cta" href="#contact">Start a conversation <span aria-hidden="true">↗</span></a>
+        <a class="nav-cta" href="#request-survey">Request a survey <span aria-hidden="true">↗</span></a>
       </nav>
     </header>
 
@@ -136,7 +136,7 @@
             </svg>
             <h3>Land surveying</h3>
             <p>High-precision surveys that establish a reliable foundation for design, development and decision-making.</p>
-            <a href="#contact" class="text-link">Explore a survey <span aria-hidden="true">↗</span></a>
+            <a href="#request-survey" class="text-link">Explore a survey <span aria-hidden="true">↗</span></a>
           </article>
           <article class="service-card">
             <span class="service-number">02 / AIR</span>
@@ -147,7 +147,7 @@
             </svg>
             <h3>UAV aerial mapping</h3>
             <p>High-resolution aerial perspectives that help teams understand expansive or hard-to-reach sites.</p>
-            <a href="#contact" class="text-link">Explore aerial mapping <span aria-hidden="true">↗</span></a>
+            <a href="#request-survey" class="text-link">Explore aerial mapping <span aria-hidden="true">↗</span></a>
           </article>
           <article class="service-card">
             <span class="service-number">03 / DATA</span>
@@ -157,7 +157,7 @@
             </svg>
             <h3>GIS solutions</h3>
             <p>Geographic information systems that bring your location-based data together in useful ways.</p>
-            <a href="#contact" class="text-link">Explore GIS <span aria-hidden="true">↗</span></a>
+            <a href="#request-survey" class="text-link">Explore GIS <span aria-hidden="true">↗</span></a>
           </article>
           <article class="service-card">
             <span class="service-number">04 / INSIGHT</span>
@@ -167,7 +167,7 @@
             </svg>
             <h3>Geospatial analytics</h3>
             <p>Advanced spatial analysis that transforms location data into clearer, decision-ready insight.</p>
-            <a href="#contact" class="text-link">Explore analytics <span aria-hidden="true">↗</span></a>
+            <a href="#request-survey" class="text-link">Explore analytics <span aria-hidden="true">↗</span></a>
           </article>
         </div>
       </section>
@@ -228,17 +228,75 @@
         </div>
       </section>
 
-      <section class="contact-section section-shell" id="contact" aria-labelledby="contact-title">
-        <div class="contact-card">
-          <div class="contact-topline"><span>THE NEXT STEP</span><span>NOVATERRA SURVEY CONSULTS</span></div>
-          <p class="eyebrow"><span class="eyebrow-line"></span> Start a conversation</p>
-          <h2 id="contact-title">Let’s get the<br><em>ground truth.</em></h2>
-          <p class="contact-copy">Have a site, a question or a project taking shape? Let’s start with what you need to know.</p>
-          <div class="contact-note">
-            <span class="contact-note-icon" aria-hidden="true">+</span>
-            <p><strong>Contact details to add</strong><br>The supplied brand guide doesn’t include an email address or phone number. Add your preferred contact details here before publishing.</p>
+      <section class="request-section" id="request-survey" aria-labelledby="contact-title">
+        <div class="request-heading">
+          <div class="request-heading-inner section-shell">
+            <p class="eyebrow"><span class="eyebrow-line"></span> Let’s get started</p>
+            <h2 id="contact-title">Request a survey.</h2>
+            <p>Tell us about the site and what you need to decide. We’ll follow up to scope the work and quote it properly.</p>
           </div>
-          <span class="contact-decoration" aria-hidden="true">NT</span>
+          <span class="request-contour" aria-hidden="true"></span>
+        </div>
+        <div class="request-body">
+          <div class="request-layout section-shell">
+            <form class="request-form" id="survey-request-form">
+              <h3>Project details</h3>
+              <div class="form-grid">
+                <label class="form-field">
+                  <span>Full name <span aria-hidden="true">*</span></span>
+                  <input name="name" autocomplete="name" required>
+                </label>
+                <label class="form-field">
+                  <span>Organization <span class="optional">(optional)</span></span>
+                  <input name="organization" autocomplete="organization">
+                </label>
+                <label class="form-field">
+                  <span>Email <span aria-hidden="true">*</span></span>
+                  <input name="email" type="email" autocomplete="email" required>
+                </label>
+                <label class="form-field">
+                  <span>Phone <span aria-hidden="true">*</span></span>
+                  <input name="phone" type="tel" autocomplete="tel" required>
+                </label>
+                <label class="form-field form-field-wide">
+                  <span>Service needed <span aria-hidden="true">*</span></span>
+                  <select name="service" required>
+                    <option value="" disabled selected>Select a service</option>
+                    <option>Land Surveying</option>
+                    <option>UAV Aerial Mapping</option>
+                    <option>GIS Solutions</option>
+                    <option>Geospatial Analytics</option>
+                    <option>Not sure yet</option>
+                  </select>
+                </label>
+                <label class="form-field form-field-wide">
+                  <span>Site location <span aria-hidden="true">*</span></span>
+                  <input name="location" autocomplete="address-level2" placeholder="Region, town, or coordinates if known" required>
+                </label>
+                <label class="form-field form-field-wide">
+                  <span>Tell us about the project <span aria-hidden="true">*</span></span>
+                  <textarea name="project" rows="4" placeholder="What are you planning, and what would you like the survey to help you understand?" required></textarea>
+                </label>
+              </div>
+              <button class="button button-dark form-submit" type="submit">Prepare survey request <span aria-hidden="true">↗</span></button>
+              <p class="form-disclaimer" id="form-status" role="status">
+                This opens your email app with the request ready to review and send.
+              </p>
+            </form>
+
+            <aside class="direct-contact" aria-labelledby="direct-contact-title">
+              <h3 id="direct-contact-title">Reach us directly</h3>
+              <dl class="contact-details">
+                <div><dt>Phone</dt><dd><a href="tel:+233254546889">0254 546 889</a></dd></div>
+                <div><dt>Email</dt><dd><a href="mailto:novaterra@gmail.com">novaterra@gmail.com</a></dd></div>
+                <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/novaterragh/" target="_blank" rel="noreferrer">@Novaterragh <span class="external-mark" aria-hidden="true">↗</span></a></dd></div>
+                <div><dt>Based in</dt><dd>Ghana</dd></div>
+              </dl>
+              <p class="contact-help">
+                Most quotes start with a short call about the site — feel free to skip the form and call or message us directly.
+              </p>
+            </aside>
+          </div>
         </div>
       </section>
     </main>
@@ -256,7 +314,11 @@
           </span>
         </a>
         <p>We don’t do easy,<br>we do excellent.</p>
-        <a class="back-to-top" href="#top">Back to top <span aria-hidden="true">↑</span></a>
+        <div class="footer-links">
+          <a href="tel:+233254546889">0254 546 889</a>
+          <a href="mailto:novaterra@gmail.com">novaterra@gmail.com</a>
+          <a class="back-to-top" href="#top">Back to top <span aria-hidden="true">↑</span></a>
+        </div>
       </div>
       <div class="footer-bottom section-shell">
         <span>© <span id="current-year"></span> NovaTerra Survey Consults</span>
